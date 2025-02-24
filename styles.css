@@ -90,12 +90,12 @@ section {
 .hobby-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
 }
 
 .hobby-item {
-    text-align: center;
+    text-align: left;
     max-width: 150px;
 }
 
