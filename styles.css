@@ -64,9 +64,14 @@ h2 {
     padding-bottom: 5px;
 }
 
+section p,
+section ul {
+    text-align: left;
+}
+
 /* Centering Titles */
 section {
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
 }
 
