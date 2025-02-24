@@ -151,7 +151,7 @@ section ul {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 .video-container iframe,
@@ -165,14 +165,27 @@ section ul {
 /* Hobbies Grid */
 .hobby-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    /* Adjust width if needed */
+    max-width: 900px;
+    /* Prevents text from stretching too wide */
+    margin: 0 auto;
+    /* Centers the content */
 }
 
 .hobby-item {
-    text-align: left;
-    max-width: 150px;
+    width: 100%;
+    /* Ensures each section takes up the full width */
+    text-align: center;
+    /* Centers the text */
+}
+
+.hobby-item p {
+    text-align: justify;
+    /* Makes paragraphs look more natural */
+    width: 100%;
 }
 
 .hobby-image {
