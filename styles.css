@@ -36,7 +36,7 @@ header {
 
 /* General Styling for Section Titles */
 h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
