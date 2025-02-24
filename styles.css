@@ -49,4 +49,93 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    text-decoration
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.intro {
+    text-align: center;
+}
+
+/* Section Titles */
+h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid #007acc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+}
+
+section p,
+section ul {
+    text-align: left;
+}
+
+/* Images */
+.index-image,
+.section-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hobbies Grid */
+.hobby-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.hobby-item {
+    text-align: left;
+    max-width: 150px;
+}
+
+.hobby-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e3a5f;
+    color: white;
+    margin-top: 20px;
+}
