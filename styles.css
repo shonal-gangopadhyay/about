@@ -110,6 +110,15 @@ section ul {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.section-image-cat {
+    width: 50%;
+    max-width: 600px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Hobbies Grid */
 .hobby-list {
     display: flex;
