@@ -37,9 +37,23 @@
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 <br><br>
-                <label for="details">Print Details:</label>
-                <textarea id="details" name="details" rows="5" placeholder="Describe your print request..."
-                    required></textarea>
+                <label for="details">Image Link:</label>
+                <textarea id="details" name="details" rows="5"
+                    placeholder="Paste the url to your image or model here..." required></textarea>
+                <br><br>
+                <label>What would you like to print?</label>
+                <br><br>
+                <input type="radio" id="earrings" name="print_type" value="Earrings" required>
+                <label for="earrings">Earrings</label>
+                <br><br>
+                <input type="radio" id="coasters" name="print_type" value="Coasters">
+                <label for="coasters">Coasters</label>
+                <br><br>
+                <input type="radio" id="magnets" name="print_type" value="Magnets">
+                <label for="magnets">Magnets</label>
+                <br><br>
+                <input type="radio" id="2dprints" name="print_type" value="2D Prints">
+                <label for="2dprints">2D Prints</label>
                 <br><br>
                 <button type="submit">Submit Request</button>
             </form>
