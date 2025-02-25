@@ -34,6 +34,13 @@ header {
 }
 
 /* Navigation */
+nav {
+    overflow-x: auto;
+    /* Enables horizontal scrolling if necessary */
+    white-space: nowrap;
+    /* Prevents wrapping */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -41,6 +48,8 @@ nav ul {
     display: flex;
     justify-content: center;
     background-color: rgba(44, 62, 80, 0.9);
+    flex-wrap: nowrap;
+    /* Prevents wrapping of items */
 }
 
 nav ul li {
@@ -58,6 +67,20 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #34495e;
     border-radius: 5px;
+}
+
+/* Ensures scrollbar only appears when needed */
+@media (max-width: 768px) {
+    nav {
+        overflow-x: auto;
+        /* Allows scrolling on smaller screens */
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        /* Aligns items to the left for scrolling */
+        padding: 10px 0;
+    }
 }
 
 /* Main Content */
