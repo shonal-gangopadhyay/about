@@ -162,6 +162,31 @@ section ul {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.example-prints .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Adjust spacing between items */
+}
+
+.print-item {
+    text-align: center;
+    max-width: 200px;
+    /* Adjust the max width of each item */
+}
+
+.print-item img {
+    width: 100%;
+    /* Makes the image responsive within its container */
+    max-width: 150px;
+    /* Adjust the maximum width of images */
+    height: auto;
+    /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
 /* Hobbies Grid */
 .hobby-list {
     display: flex;
