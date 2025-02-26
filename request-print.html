@@ -130,22 +130,20 @@
 
 
     <script>
-        let slideIndex = 0;
+        let slides = document.getElementsByClassName("slide");
+        let slideIndex = Math.floor(Math.random() * slides.length); // Start at a random slide
 
         function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-
             // Hide all slides
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
 
-            // Increment slideIndex and reset if necessary
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-
             // Display the current slide
-            slides[slideIndex - 1].style.display = "block";
+            slides[slideIndex].style.display = "block";
+
+            // Move to the next slide and loop back if necessary
+            slideIndex = (slideIndex + 1) % slides.length;
 
             // Change slide every 3 seconds
             setTimeout(showSlides, 3000);
@@ -154,6 +152,7 @@
         // Start the slideshow
         showSlides();
     </script>
+
 
 </body>
 

@@ -245,79 +245,109 @@ section ul {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Main Layout */
 .content-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
 }
 
-/* Main instructions & form */
+/* Centered Request Section */
 .request-options,
 .instructions-form {
-    width: 60%;
-    /* Adjust width as needed */
+    width: 50%;
     max-width: 600px;
-    margin-bottom: 20px;
+    text-align: center;
+}
+
+.request-options {
+    padding-bottom: 20px;
 }
 
 .instructions-form {
     margin-top: 0;
 }
 
-/* Sidebar slideshow */
-.slideshow-sidebar {
-    width: 35%;
+/* Form Styling */
+form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Slideshow container */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+/* Slideshow Sidebar */
+.slideshow-sidebar {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .slideshow-container {
+    position: relative;
     max-width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    .content-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .request-options,
-    .instructions-form,
-    .slideshow-sidebar {
-        width: 100%;
-    }
-}
-
-/* Slide images */
 .slide {
     display: none;
-    position: relative;
 }
 
 .slide img {
     width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
     border-radius: 10px;
 }
 
-/* Caption */
+/* Caption Styling */
 .caption {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px;
-    font-size: 14px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
 }
 
-/* Fade animation */
+/* Fade Animation */
 .fade {
-    animation: fadeEffect 1s;
+    animation: fadeEffect 1.5s;
 }
 
 @keyframes fadeEffect {
@@ -330,6 +360,23 @@ section ul {
     }
 }
 
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .request-options,
+    .instructions-form,
+    .slideshow-sidebar {
+        width: 100%;
+    }
+
+    .slideshow-sidebar {
+        order: -1;
+    }
+}
 
 
 /* Footer */
