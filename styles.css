@@ -245,42 +245,48 @@ section ul {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Layout container */
 .content-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+    gap: 20px;
 }
 
 /* Main instructions & form */
+.request-options,
 .instructions-form {
-    flex: 2;
-    max-width: 700px;
-    padding: 20px;
-    background: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    /* Adjust width as needed */
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.instructions-form {
+    margin-top: 0;
 }
 
 /* Sidebar slideshow */
 .slideshow-sidebar {
-    flex: 1;
-    max-width: 300px;
-    margin-left: 20px;
-    position: sticky;
-    top: 20px;
-    /* Makes it stay on the screen when scrolling */
+    width: 35%;
 }
 
 /* Slideshow container */
+
 .slideshow-container {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .request-options,
+    .instructions-form,
+    .slideshow-sidebar {
+        width: 100%;
+    }
 }
 
 /* Slide images */
@@ -323,6 +329,8 @@ section ul {
         opacity: 1;
     }
 }
+
+
 
 /* Footer */
 footer {
