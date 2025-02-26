@@ -270,44 +270,6 @@ section ul {
     min-width: 400px;
 }
 
-/* Form Styling */
-/*
-form {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-input[type="radio"] {
-    margin-right: 5px;
-}
-
-*/
-
 /* Slideshow Sidebar */
 .slideshow-sidebar {
     flex: 1;
