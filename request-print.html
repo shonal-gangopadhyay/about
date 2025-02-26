@@ -89,52 +89,34 @@
         <section class="example-prints">
             <h2>Example Prints</h2>
             <p>Here are some examples of the prints I offer:</p>
-            <div class="grid">
-                <div class="print-item">
-                    <p>
-                        <center>Earrings</center>
-                    </p>
+            <div class="slideshow-container">
+                <div class="slide fade">
                     <img src="images/earrings1.jpg" alt="Earrings">
+                    <div class="caption">Earrings</div>
                 </div>
-                <div class="print-item">
-                    <p>
-                        <center>Coasters</center>
-                    </p>
+                <div class="slide fade">
                     <img src="images/coasters1.jpg" alt="Coasters">
+                    <div class="caption">Coasters</div>
                 </div>
-                <div class="print-item">
-                    <p>
-                        <center>Magnets</center>
-                    </p>
+                <div class="slide fade">
                     <img src="images/magnets1.jpg" alt="Magnets">
+                    <div class="caption">Magnets</div>
+                </div>
+                <div class="slide fade">
                     <img src="images/magnets2.jpg" alt="Magnets">
+                    <div class="caption">Magnets</div>
                 </div>
-                <div class="print-item">
-                    <p>
-                        <center>2D Prints</center>
-                    </p>
+                <div class="slide fade">
                     <img src="images/2dprints1.jpg" alt="2D Prints">
-
+                    <div class="caption">2D Prints</div>
                 </div>
-                <div class="print-item">
-                    <p>
-                        <center>Pins</center>
-                    </p>
+                <div class="slide fade">
                     <img src="images/DK-pin.jpg" alt="Pins">
-
+                    <div class="caption">Pins</div>
                 </div>
-                <div class="print-item">
-                    <p>
-                        <center>Keychains</center>
-                    </p>
+                <div class="slide fade">
                     <img src="images/keychains.jpg" alt="Keychains">
-
-                </div>
-                <div class="print-item">
-                    <p>
-                        <center>Other</center>
-                    </p>
-
+                    <div class="caption">Keychains</div>
                 </div>
             </div>
         </section>
@@ -144,6 +126,34 @@
     <footer>
         <p>&copy; 2025 Shonal Gangopadhyay. All rights reserved.</p>
     </footer>
+
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Increment slideIndex and reset if necessary
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+
+            // Display the current slide
+            slides[slideIndex - 1].style.display = "block";
+
+            // Change slide every 3 seconds
+            setTimeout(showSlides, 3000);
+        }
+
+        // Start the slideshow
+        showSlides();
+    </script>
+
 </body>
 
 </html>
