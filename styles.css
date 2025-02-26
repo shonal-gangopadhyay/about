@@ -245,15 +245,45 @@ section ul {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    width: 600px;
+/* Layout container */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
     margin: auto;
+    padding: 20px;
+}
+
+/* Main instructions & form */
+.instructions-form {
+    flex: 2;
+    max-width: 700px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar slideshow */
+.slideshow-sidebar {
+    flex: 1;
+    max-width: 300px;
+    margin-left: 20px;
+    position: sticky;
+    top: 20px;
+    /* Makes it stay on the screen when scrolling */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    position: relative;
     overflow: hidden;
     border-radius: 10px;
 }
 
+/* Slide images */
 .slide {
     display: none;
     position: relative;
@@ -267,6 +297,7 @@ section ul {
     border-radius: 10px;
 }
 
+/* Caption */
 .caption {
     position: absolute;
     bottom: 10px;
@@ -275,57 +306,7 @@ section ul {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px;
-    font-size: 16px;
-}
-
-/* Navigation Buttons */
-.prev,
-.next,
-.fullscreen-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 5px;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.fullscreen-btn {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-}
-
-/* Fullscreen Mode */
-.fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.fullscreen img {
-    max-width: 90%;
-    max-height: 90%;
+    font-size: 14px;
 }
 
 /* Fade animation */
