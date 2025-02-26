@@ -271,6 +271,7 @@ section ul {
 }
 
 /* Form Styling */
+/*
 form {
     background: #f9f9f9;
     padding: 20px;
@@ -301,11 +302,11 @@ button:hover {
     background: #0056b3;
 }
 
-/* Radio Buttons */
 input[type="radio"] {
     margin-right: 5px;
 }
 
+*/
 
 /* Slideshow Sidebar */
 .slideshow-sidebar {
