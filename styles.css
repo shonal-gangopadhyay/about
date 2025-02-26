@@ -248,11 +248,10 @@ section ul {
 .slideshow-container {
     position: relative;
     max-width: 100%;
-    /* Ensures it does not overflow */
     width: 600px;
-    /* Adjust as needed */
     margin: auto;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .slide {
@@ -262,28 +261,71 @@ section ul {
 
 .slide img {
     width: 100%;
-    /* Makes sure images fit the container */
     height: auto;
-    /* Maintains aspect ratio */
     max-height: 400px;
-    /* Prevents images from being too tall */
     object-fit: contain;
-    /* Ensures the whole image fits without cropping */
     border-radius: 10px;
-    /* Optional: Rounded edges */
 }
 
 .caption {
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px;
-    text-align: center;
+    font-size: 16px;
+}
+
+/* Navigation Buttons */
+.prev,
+.next,
+.fullscreen-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
     border-radius: 5px;
-    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.fullscreen-btn {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+/* Fullscreen Mode */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen img {
+    max-width: 90%;
+    max-height: 90%;
 }
 
 /* Fade animation */

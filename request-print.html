@@ -89,7 +89,7 @@
         <section class="example-prints">
             <h2>Example Prints</h2>
             <p>Here are some examples of the prints I offer:</p>
-            <div class="slideshow-container">
+            <section class="slideshow-container">
                 <div class="slide fade">
                     <img src="images/earrings1.jpg" alt="Earrings">
                     <div class="caption">Earrings</div>
@@ -100,10 +100,6 @@
                 </div>
                 <div class="slide fade">
                     <img src="images/magnets1.jpg" alt="Magnets">
-                    <div class="caption">Magnets</div>
-                </div>
-                <div class="slide fade">
-                    <img src="images/magnets2.jpg" alt="Magnets">
                     <div class="caption">Magnets</div>
                 </div>
                 <div class="slide fade">
@@ -118,8 +114,14 @@
                     <img src="images/keychains.jpg" alt="Keychains">
                     <div class="caption">Keychains</div>
                 </div>
-            </div>
-        </section>
+
+                <!-- Manual Navigation Controls -->
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+                <!-- Fullscreen Button -->
+                <button class="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+            </section>
 
     </main>
 
