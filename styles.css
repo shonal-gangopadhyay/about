@@ -290,6 +290,8 @@ section ul {
 
 .slide {
     display: none;
+    position: relative;
+    /* Ensures caption is positioned relative to this container */
 }
 
 .slide img {
@@ -298,7 +300,6 @@ section ul {
     border-radius: 5px;
 }
 
-/* Caption Styling */
 .caption {
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
