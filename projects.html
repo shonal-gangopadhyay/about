@@ -71,6 +71,8 @@
 
             const articleContainer = document.getElementById('article-container');
 
+            const windowScrollY = window.scrollY;
+
             const articles = {
                 "drone": `
                     <h2>Iterative Development - Drone Simulations</h2>
@@ -452,6 +454,8 @@
             articleContainer.innerHTML = articles[project];
 
             articleContainer.scrollTop = 0;
+
+            window.scrollTo(0, windowScrollY);
         }
     </script>
 
