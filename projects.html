@@ -27,6 +27,124 @@
         <section class="content">
             <h2>Featured Projects</h2>
             <p>Here are some of my recent projects showcasing my skills.</p>
+
+
+
+            <article class="project">
+                <h3>Leveraging Stable Diffusion for Artificial Image Data Generation</h3>
+
+                <p><strong>Project Overview:</strong>This project explores the use of Stable Diffusion for generating
+                    artificial images to enhance classification models. The goal is to mitigate challenges such as small
+                    dataset sizes, imbalanced classes, and improper data labeling by creating synthetic training data.
+                </p>
+
+                <h4>Problem Statement</h4>
+                <p>Acquiring high-quality labeled training data is often expensive and time-consuming. Our project
+                    investigates whether artificially generated images using Stable Diffusion can serve as a substitute
+                    for real-world datasets, particularly in training image classifiers for CIFAR-100.</p>
+
+                <h4>Methods & Approach</h4>
+                <ul>
+                    <li>Generated artificial images using Stable Diffusion based on CIFAR-100 class labels.</li>
+                    <li>Scaled images from 512x512 down to 32x32 to match CIFAR-100 resolution.</li>
+                    <li>Trained and tested classification models (ResNet50, SeresNet152, DenseNet201) on both real and
+                        artificial datasets.</li>
+                    <li>Conducted hyperparameter tuning to optimize performance.</li>
+                </ul>
+
+                <h4>Key Findings & Results</h4>
+                <ul>
+                    <li>Training on artificial data resulted in significantly higher classification errors (Top1 Error
+                        of 75.14% vs. 22.61% for real CIFAR-100 data).</li>
+                    <li>Artificial images suffered from content mismatch, leading to poor generalization.</li>
+                    <li>Increasing dataset size improved performance slightly but did not close the gap with real data.
+                    </li>
+                </ul>
+
+                <h4>Challenges & Insights</h4>
+                <ul>
+                    <li>Stable Diffusion often generated unrealistic or cartoon-like images at lower resolutions.</li>
+                    <li>Some class labels required additional descriptors to produce recognizable images.</li>
+                    <li>Training models on synthetic data introduced biases that did not generalize well to real-world
+                        test sets.</li>
+                </ul>
+
+                <h4>Real-World Applications</h4>
+                <p>Potential applications include data augmentation in medical imaging, adversarial training in
+                    cybersecurity, and synthetic dataset creation for machine learning research.</p>
+            </article>
+
+            <article class="project">
+                <h3>Data Mining Analysis</h3>
+
+                <p><strong>Project Overview:</strong>This project explores data mining techniques to analyze purchasing
+                    patterns and clustering methods in large datasets.</p>
+
+                <h4>Problem Statement</h4>
+                <p>The goal is to extract meaningful insights from transaction data, identify frequent itemsets, and
+                    apply clustering techniques to categorize data effectively.</p>
+
+                <h4>Methods & Approach</h4>
+                <ul>
+                    <li>Frequent itemset mining using support thresholds.</li>
+                    <li>Apriori algorithm to analyze product co-occurrences.</li>
+                    <li>K-means and Spectral Clustering for customer segmentation.</li>
+                    <li>Feature extraction and Hashing Vectorizer for text-based analysis.</li>
+                </ul>
+
+                <h4>Key Findings & Results</h4>
+                <ul>
+                    <li>Mineral water, eggs, spaghetti, French fries, and chocolate were the most frequently bought
+                        items together.</li>
+                    <li>As support thresholds increased, fewer itemsets remained significant.</li>
+                    <li>K-means clustering indicated that k=2 provided the best segmentation.</li>
+                    <li>Increasing the number of features in Hashing Vectorizer improved classification accuracy.</li>
+                </ul>
+
+                <h4>Challenges & Insights</h4>
+                <ul>
+                    <li>Choosing the optimal support threshold for frequent itemset mining.</li>
+                    <li>Balancing feature size to optimize clustering without overfitting.</li>
+                    <li>Interpreting spectral clustering results on high-dimensional data.</li>
+                </ul>
+
+                <h4>Real-World Applications</h4>
+                <p>The techniques used in this project can be applied in retail analytics, customer segmentation,
+                    recommendation systems, and fraud detection.</p>
+            </article>
+
+            <article class="project">
+                <h3>BLaMo Design Document</h3>
+                <p><strong>Project Overview:</strong> The SLAM Business Layer Module (BLaMo) is a middleware component
+                    designed for the SLAM system, which assists municipal parks and recreation boards in managing sports
+                    leagues, tournaments, and scheduling.</p>
+
+                <h4>Methodology:</h4>
+                <p>The project was developed using an Object-Oriented (OO) design approach with a layered architecture.
+                    It consists of four main subsystems: Registration, Scheduling, Payment, and Notification. UML
+                    diagrams were created using LucidChart and Draw.io to illustrate class relationships and data flow.
+                </p>
+
+                <h4>Key Findings:</h4>
+                <ul>
+                    <li>Utilizing a modular design improved system scalability and maintainability.</li>
+                    <li>Generalizing League and Tournament into a single Competition class reduced redundancy.</li>
+                    <li>Third-party services for messaging and payments improved security and reliability.</li>
+                </ul>
+
+                <h4>Challenges & Lessons Learned:</h4>
+                <ul>
+                    <li>Balancing flexibility with predefined constraints in database storage.</li>
+                    <li>Ensuring smooth integration between BLaMo, UI, and the database.</li>
+                    <li>Optimizing performance while maintaining a robust notification and scheduling system.</li>
+                </ul>
+
+                <h4>Future Work:</h4>
+                <p>Potential improvements include expanding payment options beyond credit/debit cards, enhancing
+                    real-time scheduling adjustments, and integrating machine learning for predictive analytics in game
+                    scheduling.</p>
+            </article>
+
         </section>
     </main>
     <footer>
