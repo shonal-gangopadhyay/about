@@ -349,11 +349,16 @@ section ul {
 .container {
     display: flex;
     height: 100vh;
+    max-width: 1200px;
+    /* Adjust this to make the layout wider */
+    margin: 0 auto;
+    /* Centers the content horizontally */
 }
 
 /* Sidebar Styling */
 .sidebar {
-    width: 25%;
+    width: 30%;
+    /* Increase from 25% to 30% for more space */
     background: #f4f4f4;
     padding: 20px;
     overflow-y: auto;
@@ -386,6 +391,7 @@ section ul {
 /* Content Section Styling */
 .content {
     flex: 1;
+    /* Allows it to take up the remaining space */
     padding: 20px;
     overflow-y: auto;
 }
