@@ -363,6 +363,8 @@ section ul {
     /* Centers the content horizontally */
 }
 
+
+
 /* Sidebar Styling */
 .sidebar {
     width: 30%;
@@ -421,7 +423,10 @@ section ul {
     /* Prevents distortion */
 }
 
-
+#article-container {
+    max-height: 500px;  /* Set a max height for scrolling */
+    overflow-y: auto;   /* Enable vertical scrolling */
+}
 
 /* Footer */
 footer {
