@@ -27,9 +27,93 @@
         <section class="content">
             <h2>Featured Projects</h2>
             <p>Here are some of my recent projects showcasing my skills.</p>
+            <article>
+                <h3>Simulation Performance</h3>
+                <p>This project involves a discrete event simulation of machine operations, focusing on scheduling,
+                    repair, and validation methodologies. The goal is to analyze system performance under different
+                    event-handling strategies.</p>
 
+                <h4>Simulation Events & Implementation</h4>
+                <ul>
+                    <li>Machines arrive at different stations (machine station, test fix station, repair station).</li>
+                    <li>Different priority implementations (Symmetrical, Serviced priority, Failed priority,
+                        Independent).</li>
+                    <li>Events include arrivals, departures, failures, and repairs.</li>
+                    <li>Regeneration point defined when an arrival reaches the repair station with no other pending
+                        events.</li>
+                </ul>
 
+                <h4>Validation Process</h4>
+                <ul>
+                    <li>Compared simulation behavior to a Product Form Queueing Network.</li>
+                    <li>Validated mean waiting times using Bottleneck Analysis.</li>
+                    <li>Utilized multiple random seeds to ensure independent simulation runs.</li>
+                </ul>
 
+                <h4>Performance Analysis & Results</h4>
+                <ul>
+                    <li>Independent setup had slightly longer waiting times at the test fix station.</li>
+                    <li>Serviced priority setup allowed faster processing due to technician assistance.</li>
+                    <li>Hyper-exponential distributions resulted in longer waiting times than negative exponential
+                        distributions.</li>
+                </ul>
+
+                <h4>Discussion of Findings</h4>
+                <p>Refactoring the code to handle multiple arrival and departure events led to implementation challenges
+                    in the symmetric and failed cases. The independent and serviced setups performed as expected, with
+                    serviced priority showing shorter runtime and better efficiency.</p>
+
+                <h4>Key Insights & Impact</h4>
+                <p>Tagging customers for average repair time estimation and using the regenerative method ensured
+                    accurate statistical validation. The results achieved a 90% confidence level with a precision of
+                    0.05.</p>
+            </article>
+            <br>
+            <br>
+            <article>
+                <h3>Classification of Bodies of Water in the ReaLSAT Dataset</h3>
+                <p>The ReaLSAT dataset contains surface area variations of over 681,000 bodies of water worldwide from
+                    1984 to 2015. This project focuses on classifying these bodies of water using machine learning
+                    techniques to improve environmental and policy-related decision-making.</p>
+
+                <h4>Problem Statement</h4>
+                <p>Most of the dataset is unlabeled, making classification challenging. The goal is to classify bodies
+                    of water as rivers or non-rivers and further cluster rivers into distinct groups to study their
+                    morphological characteristics.</p>
+
+                <h4>Methods & Approach</h4>
+                <ul>
+                    <li>Applied K-means clustering for unsupervised classification.</li>
+                    <li>Used Transfer Learning with a pre-trained ResNet50V2 model for binary classification of rivers
+                        and non-rivers.</li>
+                    <li>Implemented Unsupervised Curriculum Learning (UCL) to refine clustering results iteratively.
+                    </li>
+                    <li>Extracted features using edge detection and Hough transforms to enhance classification accuracy.
+                    </li>
+                </ul>
+
+                <h4>Key Findings & Results</h4>
+                <ul>
+                    <li>K-means clustering struggled with high accuracy but helped in initial grouping.</li>
+                    <li>Transfer Learning achieved over 98% accuracy in classifying rivers and non-rivers.</li>
+                    <li>Feature extraction using Hough transforms improved clustering of river types.</li>
+                    <li>UCL demonstrated promise but required fine-tuning for optimal results.</li>
+                </ul>
+
+                <h4>Challenges & Insights</h4>
+                <ul>
+                    <li>Unlabeled data required extensive manual validation for ground truth assessment.</li>
+                    <li>River classification depended heavily on spatial and morphological characteristics.</li>
+                    <li>Scaling image sizes impacted feature extraction and classification efficiency.</li>
+                </ul>
+
+                <h4>Real-World Applications</h4>
+                <p>The techniques explored in this project can be used for environmental monitoring, climate change
+                    studies, and water resource management by providing policymakers with structured water
+                    classification insights.</p>
+            </article>
+            <br>
+            <br>
             <article class="project">
                 <h3>Leveraging Stable Diffusion for Artificial Image Data Generation</h3>
 
