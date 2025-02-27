@@ -451,9 +451,7 @@
             // Update the content area with the selected article
             articleContainer.innerHTML = articles[project];
 
-            setTimeout(() => {
-                articleContainer.scrollTop = 0;
-            }, 0);
+            window.scrollTo(0,0);
         }
     </script>
 
