@@ -346,9 +346,17 @@ section ul {
     }
 }
 
-.container {
+.container-project {
     display: flex;
     height: 100vh;
+    max-width: 1200px;
+    /* Adjust this to make the layout wider */
+    margin: 0 auto;
+    /* Centers the content horizontally */
+}
+
+.container-other {
+    display: flex;
     max-width: 1200px;
     /* Adjust this to make the layout wider */
     margin: 0 auto;
