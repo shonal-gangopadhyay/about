@@ -28,6 +28,174 @@
             <h2>Featured Projects</h2>
             <p>Here are some of my recent projects showcasing my skills.</p>
             <article>
+                <h3>Iterative Development of Drone Simulation Systems</h3>
+                <p>Each semester, I iteratively develop an altered drone simulation system with my teaching assistants.
+                    Students receive an incomplete code base with intentional design flaws. Over the course of
+                    structured labs, they improve the design and expand functionality using design patterns.</p>
+
+                <h4>Development Approach</h4>
+                <ul>
+                    <li>Students start with a flawed, incomplete codebase.</li>
+                    <li>Through labs, they refactor the design and implement additional functionality.</li>
+                    <li>Each extension to the project requires the use of a design pattern.</li>
+                    <li>At the end of the semester, students have a fully functioning, well-structured system.</li>
+                </ul>
+
+                <h4>Past Simulation Themes</h4>
+                <ul>
+                    <li>Drone Delivery System</li>
+                    <li>Uber Simulation System</li>
+                    <li>DoorDash Simulation</li>
+                    <li>Drone Search and Rescue Simulation</li>
+                </ul>
+
+                <h4>Software Engineering Best Practices</h4>
+                <ul>
+                    <li>Conformance to Google Code Style.</li>
+                    <li>Unit and integration testing using Google Test Suite.</li>
+                    <li>Docker containerization for project demonstration.</li>
+                    <li>JIRA for team collaboration and project management.</li>
+                </ul>
+
+                <h4>Extensions and Proof of Concepts</h4>
+                <p>Each semester, I design proof-of-concept extensions that students can choose from. Every extension
+                    integrates a design pattern to enhance system functionality.</p>
+
+                <h4>Real-World Applications</h4>
+                <p>This iterative approach ensures students gain hands-on experience with professional software
+                    engineering practices, preparing them for real-world development roles.</p>
+            </article>
+            <br>
+            <br>
+            <article>
+                <h3>CSCI5619 VR Navigation Simulation</h3>
+                <p>This VR simulation is designed to help users navigate and familiarize themselves with the University
+                    of Minnesota Twin Cities campus. The experience incorporates redirected walking techniques and
+                    interactive spatial menus to enhance immersion and ease of use.</p>
+
+                <h4>Problem Statement</h4>
+                <p>Newcomers often struggle to navigate large campuses. This simulation aims to address this challenge
+                    by providing an interactive VR experience that allows users to explore campus landmarks efficiently.
+                </p>
+
+                <h4>Methods & Features</h4>
+                <ul>
+                    <li>Scene created using Google Earth and Google Maps imagery.</li>
+                    <li>Two forms of redirected walking: scaling the environment and adjusting user movement speed.</li>
+                    <li>Six interactive spatial menus for different navigation and setting options.</li>
+                    <li>Audio descriptions generated using OpenAI's ChatGPT and Narakeet.</li>
+                </ul>
+
+                <h4>Key Interaction Techniques</h4>
+                <ul>
+                    <li>Users can teleport to different campus locations using a travel menu.</li>
+                    <li>Scaling options allow users to zoom in and out by 1.25x or 25x.</li>
+                    <li>Speed adjustments let users move at up to 3x normal speed.</li>
+                    <li>Toggle menus for Gopher Way routes, minimaps, and hearing assistance features.</li>
+                </ul>
+
+                <h4>Controls & User Experience</h4>
+                <ul>
+                    <li><strong>Left trigger:</strong> Scale map up by 25%</li>
+                    <li><strong>Right trigger:</strong> Scale map down by 25%</li>
+                    <li><strong>Right grip:</strong> Click function</li>
+                    <li><strong>Right ax_button:</strong> Toggle size menu item</li>
+                    <li><strong>Right by_button:</strong> Toggle scale menu item</li>
+                </ul>
+
+                <h4>Third-Party Assets</h4>
+                <p>This project incorporates assets from Google Earth, Google Maps, ChatGPT (for descriptions), and
+                    Narakeet (for audio files).</p>
+            </article>
+            <br>
+            <br>
+            <article>
+                <h3>Optimization of Drone Delivery for the University of Minnesota Campus</h3>
+                <p>This project explores the optimization of drone delivery systems using agent-based simulation (ABS)
+                    and genetic algorithms. The study focuses on determining the optimal placement and number of
+                    recharge stations on the University of Minnesota - Twin Cities campus.</p>
+
+                <h4>Problem Statement</h4>
+                <p>As drone-based package delivery gains traction, challenges such as recharge station placement and
+                    operational efficiency arise. This research formulates the problem as a hub location optimization
+                    task to improve drone logistics.</p>
+
+                <h4>Methods & Approach</h4>
+                <ul>
+                    <li>Agent-Based Simulation (ABS) models drone behavior, battery life, and delivery routes.</li>
+                    <li>A* Search Algorithm determines efficient delivery paths.</li>
+                    <li>Genetic Algorithms optimize recharge station placement for cost and efficiency.</li>
+                    <li>Cost estimations are derived from Amazon’s drone technology data.</li>
+                </ul>
+
+                <h4>Key Findings & Results</h4>
+                <ul>
+                    <li>Optimized placement consistently identified two recharge stations as the most effective
+                        solution.</li>
+                    <li>Increased drone fleet sizes led to higher operational costs but did not alter optimal station
+                        count.</li>
+                    <li>The study highlighted the impact of graph density on optimization accuracy.</li>
+                </ul>
+
+                <h4>Challenges & Insights</h4>
+                <ul>
+                    <li>High computation times (~6 days of simulation) due to complex agent-based modeling.</li>
+                    <li>Lack of real-world validation presents difficulties in benchmarking results.</li>
+                    <li>Graph complexity influenced station placement and algorithm performance.</li>
+                </ul>
+
+                <h4>Real-World Applications</h4>
+                <p>This research provides insights into optimizing drone logistics for urban delivery networks. Future
+                    work includes refining the simulation, transitioning to event-based models, and exploring real-world
+                    deployment scenarios.</p>
+            </article>
+            <br>
+            <br>
+            <article>
+                <h3>Predicting Genetic Interaction Profiles using Machine Learning</h3>
+                <p>Genome-wide CRISPR screens are essential for studying genetic interactions but are costly and
+                    time-intensive. This project explores machine learning approaches to predict genetic interaction
+                    profiles, reducing the need for extensive experimental screening.</p>
+
+                <h4>Problem Statement</h4>
+                <p>Predicting genetic interactions computationally can accelerate biological discoveries and reduce
+                    experimental costs. The goal is to develop an accurate model that can infer interaction profiles for
+                    17,000 genes based on a training dataset of 180 known gene interactions.</p>
+
+                <h4>Methods & Approach</h4>
+                <ul>
+                    <li>Utilized Multi-Layer Perceptron (MLP), Deep Belief Network (DBN), and Convolutional Neural
+                        Network (CNN) models.</li>
+                    <li>Employed preprocessing techniques like row-wise normalization, quantile normalization, and L2
+                        normalization.</li>
+                    <li>Used k-fold cross-validation for model evaluation.</li>
+                    <li>Performance measured using Pearson Correlation Coefficient (PCC), Spearman Correlation
+                        Coefficient (SCC), and Area Under the ROC Curve (AUROC).</li>
+                </ul>
+
+                <h4>Key Findings & Results</h4>
+                <ul>
+                    <li>CNN outperformed other models with an AUROC of 0.563.</li>
+                    <li>MLP and DBN performed similarly to random classifiers, indicating challenges in feature
+                        extraction.</li>
+                    <li>Normalization had varying effects, with raw data producing the best results.</li>
+                </ul>
+
+                <h4>Challenges & Insights</h4>
+                <ul>
+                    <li>DBN struggled with hierarchical learning for this dataset.</li>
+                    <li>CNN's ability to capture spatial dependencies led to superior results.</li>
+                    <li>Further hyperparameter tuning is needed to improve performance.</li>
+                </ul>
+
+                <h4>Real-World Applications</h4>
+                <p>This approach can revolutionize genetic research by enabling computational inference of gene
+                    interactions, reducing costs, and accelerating discoveries in fields like cancer research and
+                    personalized medicine.</p>
+            </article>
+            <br>
+            <br>
+            <article>
                 <h3>Simulation Performance</h3>
                 <p>This project involves a discrete event simulation of machine operations, focusing on scheduling,
                     repair, and validation methodologies. The goal is to analyze system performance under different
