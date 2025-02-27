@@ -347,18 +347,22 @@ section ul {
 }
 
 .project-image {
-    width: 100%;
-    /* Ensures the image scales to the full width of the container */
-    max-height: 400px;
-    /* Limits height to maintain aspect ratio */
-    object-fit: cover;
-    /* Ensures the image fills the area without distortion */
-    border-radius: 8px;
-    /* Optional: Adds rounded corners for better aesthetics */
     display: block;
+    /* Ensures it's a block element for proper centering */
     margin: 0 auto 20px auto;
-    /* Centers image and adds spacing below */
+    /* Centers the image horizontally and adds space below */
+    width: 80%;
+    /* Adjusts the width to a reasonable size */
+    max-width: 600px;
+    /* Ensures images are not too large */
+    height: auto;
+    /* Maintains aspect ratio */
+    border-radius: 8px;
+    /* Optional: Adds rounded corners for a sleek look */
+    object-fit: contain;
+    /* Prevents distortion */
 }
+
 
 
 /* Footer */
