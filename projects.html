@@ -23,10 +23,56 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="container">
+
+        <aside class="sidebar">
+            <h2>Project List</h2>
+            <ul>
+                <li><a href="#" onclick="loadArticle('drone')">Iterative Development - Drone Simulations</a></li>
+                <li><a href="#" onclick="loadArticle('vr')">VR Navigation Simulation</a></li>
+                <li><a href="#" onclick="loadArticle('delivery')">Optimization of Drone Delivery - UMN</a></li>
+                <li><a href="#" onclick="loadArticle('gene')">Predicting Genetic Interaction Profiles</a></li>
+                <li><a href="#" onclick="loadArticle('simulation')">Simulation Performance</a></li>
+                <li><a href="#" onclick="loadArticle('realsat')">Classification of Bodies of Water - ReaLSAT</a></li>
+                <li><a href="#" onclick="loadArticle('stable-diffusion')">Leveraging Stable Diffusion for AI Data
+                        Generation</a></li>
+                <li><a href="#" onclick="loadArticle('data-mining')">Data Mining Analysis</a></li>
+                <li><a href="#" onclick="loadArticle('blamo')">BLaMo Design Document</a></li>
+            </ul>
+        </aside>
+
         <section class="content">
-            <article>
-                <h2>Iterative Development - Drone Simulations</h2>
+            <div id="article-container">
+                <h2>Select a project from the menu</h2>
+                <p>Click on a project title to view details.</p>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Shonal Gangopadhyay. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function checkPassword() {
+            var password = prompt("Enter the password to access this page:");
+            var correctPassword = "shonalshonal";  // Change this to your actual password
+
+            if (password === correctPassword) {
+                window.location.href = "about-personal.html";  // Change this to your actual secret page
+            } else if (password !== null) {
+                alert("Incorrect password. Ask me if you need the password.");
+            }
+        }
+    </script>
+
+    <script>
+        function loadArticle(project) {
+            const articleContainer = document.getElementById('article-container');
+
+            const articles = {
+                "drone": `
+                    <h2>Iterative Development - Drone Simulations</h2>
                 <img src="images/projects/3081.png" alt="Iterative Development of Drone Simulation System"
                     class="project-image">
                 <p>Each semester, I iteratively develop an altered drone simulation system with my teaching assistants.
@@ -64,11 +110,9 @@
                 <h4>Real-World Applications</h4>
                 <p>This iterative approach ensures students gain hands-on experience with professional software
                     engineering practices, preparing them for real-world development roles.</p>
-            </article>
-            <br>
-            <br>
-            <article>
-                <h2>VR Navigation Simulation</h2>
+                `,
+                "vr": `
+                    <h2>VR Navigation Simulation</h2>
                 <img src="images/projects/5619.png" alt="VR Navigation Simulation" class="project-image">
 
                 <p>This VR simulation is designed to help users navigate and familiarize themselves with the University
@@ -108,11 +152,9 @@
                 <h4>Third-Party Assets</h4>
                 <p>This project incorporates assets from Google Earth, Google Maps, ChatGPT (for descriptions), and
                     Narakeet (for audio files).</p>
-            </article>
-            <br>
-            <br>
-            <article>
-                <h2>Optimization of Drone Delivery - UMN</h2>
+                `,
+                "delivery": `
+                    <h2>Optimization of Drone Delivery - UMN</h2>
                 <img src="images/projects/3081.png"
                     alt="Optimization of Drone Delivery for the University of Minnesota Campus" class="project-image">
 
@@ -153,10 +195,8 @@
                 <p>This research provides insights into optimizing drone logistics for urban delivery networks. Future
                     work includes refining the simulation, transitioning to event-based models, and exploring real-world
                     deployment scenarios.</p>
-            </article>
-            <br>
-            <br>
-            <article>
+                `,
+                "gene": `
                 <h2>Predicting Genetic Interaction Profiles</h2>
                 <img src="images/projects/5461.png" alt="Predicting Genetic Interaction Profiles using Machine Learning"
                     class="project-image">
@@ -200,10 +240,8 @@
                 <p>This approach can revolutionize genetic research by enabling computational inference of gene
                     interactions, reducing costs, and accelerating discoveries in fields like cancer research and
                     personalized medicine.</p>
-            </article>
-            <br>
-            <br>
-            <article>
+                `,
+                "simulation": `
                 <h2>Simulation Performance</h2>
                 <img src="images/projects/5980.png" alt="Simulation Performance" class="project-image">
 
@@ -245,10 +283,8 @@
                 <p>Tagging customers for average repair time estimation and using the regenerative method ensured
                     accurate statistical validation. The results achieved a 90% confidence level with a precision of
                     0.05.</p>
-            </article>
-            <br>
-            <br>
-            <article>
+                `,
+                "realsat": `
                 <h2>Classification of Bodies of Water - ReaLSAT</h2>
                 <img src="images/projects/8523.png" alt="Classification of Bodies of Water in the ReaLSAT Dataset"
                     class="project-image">
@@ -292,10 +328,8 @@
                 <p>The techniques explored in this project can be used for environmental monitoring, climate change
                     studies, and water resource management by providing policymakers with structured water
                     classification insights.</p>
-            </article>
-            <br>
-            <br>
-            <article class="project">
+                `,
+                "stable-diffusion": `
                 <h2>Leveraging Stable Diffusion for AI Data Generation</h2>
                 <img src="images/projects/5527.png"
                     alt="Leveraging Stable Diffusion for Artificial Image Data Generation" class="project-image">
@@ -340,10 +374,8 @@
                 <h4>Real-World Applications</h4>
                 <p>Potential applications include data augmentation in medical imaging, adversarial training in
                     cybersecurity, and synthetic dataset creation for machine learning research.</p>
-            </article>
-            <br>
-            <br>
-            <article class="project">
+                `,
+                "data-mining": `
                 <h2>Data Mining Analysis</h2>
                 <img src="images/projects/5523.png" alt="Data Mining Analysis" class="project-image">
                 <p>This project explores data mining techniques to analyze purchasing
@@ -379,61 +411,48 @@
                 <h4>Real-World Applications</h4>
                 <p>The techniques used in this project can be applied in retail analytics, customer segmentation,
                     recommendation systems, and fraud detection.</p>
-            </article>
-            <br>
-            <br>
-            <article class="project">
-                <h2>BLaMo Design Document</h2>
-                <img src="images/projects/5801.png" alt="BLaMo Design Document" class="project-image">
+                `,
+                "blamo": `
+                    <h2>BLaMo Design Document</h2>
+                    <img src="images/projects/5801.png" alt="BLaMo Design Document" class="project-image">
 
-                <p>The SLAM Business Layer Module (BLaMo) is a middleware component
-                    designed for the SLAM system, which assists municipal parks and recreation boards in managing sports
-                    leagues, tournaments, and scheduling.</p>
+                    <p>The SLAM Business Layer Module (BLaMo) is a middleware component
+                        designed for the SLAM system, which assists municipal parks and recreation boards in managing sports
+                        leagues, tournaments, and scheduling.</p>
 
-                <h4>Methodology:</h4>
-                <p>The project was developed using an Object-Oriented (OO) design approach with a layered architecture.
-                    It consists of four main subsystems: Registration, Scheduling, Payment, and Notification. UML
-                    diagrams were created using LucidChart and Draw.io to illustrate class relationships and data flow.
-                </p>
+                    <h4>Methodology:</h4>
+                    <p>The project was developed using an Object-Oriented (OO) design approach with a layered architecture.
+                        It consists of four main subsystems: Registration, Scheduling, Payment, and Notification. UML
+                        diagrams were created using LucidChart and Draw.io to illustrate class relationships and data flow.
+                    </p>
 
-                <h4>Key Findings:</h4>
-                <ul>
-                    <li>Utilizing a modular design improved system scalability and maintainability.</li>
-                    <li>Generalizing League and Tournament into a single Competition class reduced redundancy.</li>
-                    <li>Third-party services for messaging and payments improved security and reliability.</li>
-                </ul>
+                    <h4>Key Findings:</h4>
+                    <ul>
+                        <li>Utilizing a modular design improved system scalability and maintainability.</li>
+                        <li>Generalizing League and Tournament into a single Competition class reduced redundancy.</li>
+                        <li>Third-party services for messaging and payments improved security and reliability.</li>
+                    </ul>
 
-                <h4>Challenges & Lessons Learned:</h4>
-                <ul>
-                    <li>Balancing flexibility with predefined constraints in database storage.</li>
-                    <li>Ensuring smooth integration between BLaMo, UI, and the database.</li>
-                    <li>Optimizing performance while maintaining a robust notification and scheduling system.</li>
-                </ul>
+                    <h4>Challenges & Lessons Learned:</h4>
+                    <ul>
+                        <li>Balancing flexibility with predefined constraints in database storage.</li>
+                        <li>Ensuring smooth integration between BLaMo, UI, and the database.</li>
+                        <li>Optimizing performance while maintaining a robust notification and scheduling system.</li>
+                    </ul>
 
-                <h4>Future Work:</h4>
-                <p>Potential improvements include expanding payment options beyond credit/debit cards, enhancing
-                    real-time scheduling adjustments, and integrating machine learning for predictive analytics in game
-                    scheduling.</p>
-            </article>
+                    <h4>Future Work:</h4>
+                    <p>Potential improvements include expanding payment options beyond credit/debit cards, enhancing
+                        real-time scheduling adjustments, and integrating machine learning for predictive analytics in game
+                        scheduling.</p>
+                `
+            };
 
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Shonal Gangopadhyay. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function checkPassword() {
-            var password = prompt("Enter the password to access this page:");
-            var correctPassword = "shonalshonal";  // Change this to your actual password
-
-            if (password === correctPassword) {
-                window.location.href = "about-personal.html";  // Change this to your actual secret page
-            } else if (password !== null) {
-                alert("Incorrect password. Ask me if you need the password.");
-            }
+            // Update the content area with the selected article
+            articleContainer.innerHTML = articles[project];
         }
     </script>
+
+
 </body>
 
 </html>
