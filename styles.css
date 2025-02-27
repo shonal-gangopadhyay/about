@@ -424,7 +424,7 @@ section ul {
 }
 
 #article-container {
-    max-height: 500px;  /* Set a max height for scrolling */
+    max-height: 1000px;  /* Set a max height for scrolling */
     overflow-y: auto;   /* Enable vertical scrolling */
 }
 
