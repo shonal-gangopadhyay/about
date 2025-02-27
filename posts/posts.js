@@ -1,1 +1,1 @@
-const posts = ["post1.js", "post2.js"];
+window.posts = ["post1.js", "post2.js"];
