@@ -68,6 +68,9 @@
 
     <script>
         function loadArticle(project) {
+
+            const scrollPosition = window.scrollY || window.pageYOffset;
+
             const articleContainer = document.getElementById('article-container');
 
             const articles = {
@@ -449,6 +452,8 @@
 
             // Update the content area with the selected article
             articleContainer.innerHTML = articles[project];
+
+            window.scrollTo(0, scrollPosition);
         }
     </script>
 
