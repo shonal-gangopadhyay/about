@@ -455,7 +455,10 @@
 
             articleContainer.scrollTop = 0;
 
-            window.scrollTo(0, windowScrollY);
+            // Wait for a short time to allow layout adjustments, then scroll back
+            setTimeout(() => {
+                window.scrollTo(0, windowScrollY);
+            }, 0);
         }
     </script>
 
