@@ -177,23 +177,24 @@
             cats3.addEventListener("click", function () {
                 // Check if the player already exists
                 if (!document.getElementById("spotifyPlayer")) {
-                    // Create a div for the music player
+                    // Create a div for the music player and center it
                     const musicContainer = document.createElement("div");
                     musicContainer.id = "spotifyPlayer";
+                    musicContainer.style.textAlign = "center"; // Center the player
                     musicContainer.style.marginTop = "20px";
 
                     // Create the Spotify embed
                     musicContainer.innerHTML = `
-                        <iframe style="border-radius:12px" 
-                            src="https://open.spotify.com/track/1gVN2TuTQh2g9LE1wi6FTY?si=6e59b2bb992044b8"
-                            width="300" height="80" frameborder="0" 
+                        <iframe style="border-radius:12px; width:100%; max-width:500px;" 
+                            src="https://open.spotify.com/embed/track/1gVN2TuTQh2g9LE1wi6FTY?utm_source=generator" 
+                            height="352" frameborder="0" allowfullscreen="" 
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                             loading="lazy">
                         </iframe>
                     `;
 
-                    // Append music player below the clicked image
-                    cats3.insertAdjacentElement("afterend", musicContainer);
+                    // Append music player below the cat images container (on a new line)
+                    cats3.parentNode.insertAdjacentElement("afterend", musicContainer);
                 }
             });
         });
