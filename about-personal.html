@@ -125,7 +125,7 @@
             <div class="cat-images-container">
                 <img src="images/about-personal/cats/cats1.jpg" alt="My cats" class="section-image-cat">
                 <img src="images/about-personal/cats/cats4.jpg" alt="My cats" class="section-image-cat">
-                <img src="images/about-personal/cats/cats3.jpg" alt="My cats" class="section-image-cat">
+                <img src="images/about-personal/cats/cats3.jpg" alt="My cats" class="section-image-cat" id="cats3">
             </div>
             <p>
                 Luffy and Fern are the heart and soul of our home, each with their own unique personality and charm.
@@ -169,6 +169,36 @@
     <footer>
         <p>&copy; 2025 Shonal Gangopadhyay. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cats3 = document.getElementById("cats3");
+
+            cats3.addEventListener("click", function () {
+                // Check if the player already exists
+                if (!document.getElementById("spotifyPlayer")) {
+                    // Create a div for the music player
+                    const musicContainer = document.createElement("div");
+                    musicContainer.id = "spotifyPlayer";
+                    musicContainer.style.marginTop = "20px";
+
+                    // Create the Spotify embed
+                    musicContainer.innerHTML = `
+                        <iframe style="border-radius:12px" 
+                            src="https://open.spotify.com/track/1gVN2TuTQh2g9LE1wi6FTY?si=6e59b2bb992044b8"
+                            width="300" height="80" frameborder="0" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                    `;
+
+                    // Append music player below the clicked image
+                    cats3.insertAdjacentElement("afterend", musicContainer);
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
