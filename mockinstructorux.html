@@ -27,9 +27,16 @@
         </div>
         <div class="card">
             <h2><i class="fas fa-calendar-alt"></i> School Calendar</h2>
-            <iframe
-                src="https://calendar.google.com/calendar/embed?src=1950c5c6d1ce93d8e5c8c7499234c1ed3b96077ba8f5dba99add8eb6c405f7cb%40group.calendar.google.com&ctz=America%2FChicago"
-                style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <div style="position: relative; width: 100%; max-width: 800px;">
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?src=1950c5c6d1ce93d8e5c8c7499234c1ed3b96077ba8f5dba99add8eb6c405f7cb%40group.calendar.google.com&ctz=America%2FChicago"
+                    style="border: 0; width: 100%; height: 600px; position: relative; z-index: 1;" frameborder="0"
+                    scrolling="no">
+                </iframe>
+                <div
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 600px; background: rgba(0, 0, 0, 0.4); z-index: 2; pointer-events: none;">
+                </div>
+            </div>
         </div>
         <div class="card">
             <h2><i class="fas fa-comments"></i> Parent Forum</h2>
