@@ -3,10 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Karate Instructor Portal - Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animation container */
+        #calendarContainer {
+            overflow: hidden;
+            transition: height 0.5s ease;
+            height: 0;
+            margin-top: 1rem;
+        }
+
+        /* Animated Arrow */
+        #toggleCalendar .arrow {
+            display: inline-block;
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        #toggleCalendar.open .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
 
 <body>
@@ -17,32 +37,78 @@
             <h2><i class="fas fa-user-edit"></i> Update Profile</h2>
             <a href="#" class="button"><i class="fas fa-edit"></i> Edit Info</a>
         </div>
+
         <div class="card">
             <h2><i class="fas fa-file-contract"></i> View Contracts</h2>
             <a href="#" class="button"><i class="fas fa-file-alt"></i> View</a>
         </div>
+
         <div class="card">
             <h2><i class="fas fa-credit-card"></i> Payment Information</h2>
             <a href="#" class="button"><i class="fas fa-credit-card"></i> Update Payment</a>
         </div>
+
         <div class="card">
             <h2><i class="fas fa-calendar-alt"></i> School Calendar</h2>
-            <div style="position: relative; width: 100%; max-width: 800px;">
-                <iframe
-                    src="https://calendar.google.com/calendar/embed?src=1950c5c6d1ce93d8e5c8c7499234c1ed3b96077ba8f5dba99add8eb6c405f7cb%40group.calendar.google.com&ctz=America%2FChicago"
-                    style="border: 0; width: 100%; height: 600px; position: relative; z-index: 1;" frameborder="0"
-                    scrolling="no">
-                </iframe>
-                <div
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 600px; background: rgba(0, 0, 0, 0.4); z-index: 2; pointer-events: none;">
+            <button class="button" id="toggleCalendar">
+                <i class="fas fa-calendar"></i> View Schedule
+                <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+            </button>
+
+            <div id="calendarContainer">
+                <div style="position: relative; width: 100%; max-width: 800px;">
+                    <iframe
+                        src="https://calendar.google.com/calendar/embed?src=1950c5c6d1ce93d8e5c8c7499234c1ed3b96077ba8f5dba99add8eb6c405f7cb%40group.calendar.google.com&ctz=America%2FChicago"
+                        style="border: 0; width: 100%; height: 600px; position: relative; z-index: 1;" frameborder="0"
+                        scrolling="no">
+                    </iframe>
+                    <div
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 600px; background: rgba(0, 0, 0, 0.4); z-index: 2; pointer-events: none;">
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="card">
             <h2><i class="fas fa-comments"></i> Parent Forum</h2>
             <a href="#" class="button"><i class="fas fa-comment"></i> Join Forum</a>
         </div>
     </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleCalendar');
+        const calendarContainer = document.getElementById('calendarContainer');
+
+        let isOpen = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+
+            if (isOpen) {
+                const scrollHeight = calendarContainer.scrollHeight;
+                calendarContainer.style.height = scrollHeight + "px";
+                toggleBtn.classList.add('open');
+                toggleBtn.innerHTML = `
+          <i class="fas fa-calendar-minus"></i> Hide Schedule
+          <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+        `;
+            } else {
+                calendarContainer.style.height = 0;
+                toggleBtn.classList.remove('open');
+                toggleBtn.innerHTML = `
+          <i class="fas fa-calendar"></i> View Schedule
+          <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+        `;
+            }
+        });
+
+        // Optional: If resizing window, adjust open height
+        window.addEventListener('resize', () => {
+            if (isOpen) {
+                calendarContainer.style.height = calendarContainer.scrollHeight + "px";
+            }
+        });
+    </script>
 </body>
 
 </html>
