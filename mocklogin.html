@@ -1,86 +1,23 @@
-<!-- mocklogin.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Karate School Login</title>
-    <link rel="stylesheet" href="style.css"> <!-- optional external CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .login-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #0077cc;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #005fa3;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karate Parent Portal - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <div class="login-container">
-        <h2>Parent Login</h2>
-        <input type="email" placeholder="Email Address" required><br>
-        <input type="password" placeholder="Password" required><br>
-        <button onclick="mockParentLogin()">Login</button>
+        <h1>Parent Portal Login</h1>
+        <form action="mockparentux.html">
+            <input type="email" placeholder="Email Address" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit"><i class="fas fa-sign-in-alt"></i> Log In</button>
+        </form>
     </div>
-
-    <div class="login-container">
-        <h2>Instructor Login</h2>
-        <input type="email" placeholder="Email Address" required><br>
-        <input type="password" placeholder="Password" required><br>
-        <button onclick="mockInstructorLogin()">Login</button>
-    </div>
-
-    <script>
-        function mockParentLogin() {
-            // Simulate successful login
-            window.location.href = "mockparentux.html"; // leads to the parent dashboard
-        }
-    </script>
-
-    <script>
-        function mockInstructorLogin() {
-            // Simulate successful login
-            window.location.href = "mockinstructorux.html"; // leads to the instructor dashboard
-        }
-    </script>
-
 </body>
 
 </html>
