@@ -57,13 +57,27 @@
         <h2>Parent Login</h2>
         <input type="email" placeholder="Email Address" required><br>
         <input type="password" placeholder="Password" required><br>
-        <button onclick="mockLogin()">Login</button>
+        <button onclick="mockParentLogin()">Login</button>
+    </div>
+
+    <div class="login-container">
+        <h2>Instructor Login</h2>
+        <input type="email" placeholder="Email Address" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <button onclick="mockInstructorLogin()">Login</button>
     </div>
 
     <script>
-        function mockLogin() {
+        function mockParentLogin() {
             // Simulate successful login
             window.location.href = "mockparentux.html"; // leads to the parent dashboard
+        }
+    </script>
+
+    <script>
+        function mockInstructorLogin() {
+            // Simulate successful login
+            window.location.href = "mockinstructorux.html"; // leads to the instructor dashboard
         }
     </script>
 
