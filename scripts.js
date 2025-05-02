@@ -1,4 +1,4 @@
-window.checkPassword() = function () {
+function checkPassword() {
     var password = prompt("Enter the password to access this page:");
     var correctPassword = "shonalshonal";  // Change this to your actual password
 
@@ -7,7 +7,7 @@ window.checkPassword() = function () {
     } else if (password !== null) {
         alert("Incorrect password. Ask me if you need the password.");
     }
-};
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
     const blogContainer = document.getElementById("blog-container");
