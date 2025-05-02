@@ -1,3 +1,14 @@
+function checkPassword() {
+    var password = prompt("Enter the password to access this page:");
+    var correctPassword = "shonalshonal";  // Change this to your actual password
+
+    if (password === correctPassword) {
+        window.location.href = "about-personal.html";  // Change this to your actual secret page
+    } else if (password !== null) {
+        alert("Incorrect password. Ask me if you need the password.");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     const blogContainer = document.getElementById("blog-container");
 
@@ -18,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             blogContainer.innerHTML = ""; // Clear "Loading posts..."
             for (let postFile of window.posts) {
                 await loadScript(`posts/${postFile}`); // ✅ Load each post
-                
+
                 let postVarName = postFile.replace(".js", ""); // Get variable name
                 let postData = window[postVarName]; // ✅ Get post data
 
@@ -44,3 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     fetchPosts();
 });
+
+
+
+
