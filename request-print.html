@@ -12,14 +12,12 @@
 <body>
     <header>
         <h1>Request a 3D Print</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-personal.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="request-print.html">Request Print</a></li>
-            </ul>
-        </nav>
+        <div id="nav2"></div>
+        <script>
+            fetch('components/nav2.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('nav2').innerHTML = data);
+        </script>
     </header>
 
     <main class="content-container">
