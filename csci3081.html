@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CSCI 3081W Materials - Spring 2025</title>
-        <link rel="icon" type="image/x-icon" href="images/icon.ico">
-        <link rel="stylesheet" href="styles.css">
-        <script defer src="scripts.js"></script>
+        <div id="shared-head"></div>
+        <script>
+                fetch("components/head.html")
+                        .then((res) => res.text())
+                        .then((html) => {
+                                document.getElementById("shared-head").outerHTML = html;
+                        });
+        </script>
 </head>
 
 <body>
