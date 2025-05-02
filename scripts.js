@@ -28,15 +28,14 @@ if (currentPage === "about-personal.html") {
     });
 }
 
-if (currentPage === "projects.html") {
-    function loadArticle(project) {
+function loadArticle(project) {
+    if (window.location.pathname.indexOf("projects.html") === -1) return;
+    const articleContainer = document.getElementById('article-container');
 
-        const articleContainer = document.getElementById('article-container');
+    const windowScrollY = window.scrollY;
 
-        const windowScrollY = window.scrollY;
-
-        const articles = {
-            "drone": `
+    const articles = {
+        "drone": `
                 <h2>Iterative Development - Drone Simulations</h2>
             <img src="images/projects/3081.png" alt="Iterative Development of Drone Simulation System"
                 class="project-image">
@@ -76,7 +75,7 @@ if (currentPage === "projects.html") {
             <p>This iterative approach ensures students gain hands-on experience with professional software
                 engineering practices, preparing them for real-world development roles.</p>
             `,
-            "vr": `
+        "vr": `
                 <h2>VR Navigation Simulation</h2>
             <img src="images/projects/5619.png" alt="VR Navigation Simulation" class="project-image">
 
@@ -118,7 +117,7 @@ if (currentPage === "projects.html") {
             <p>This project incorporates assets from Google Earth, Google Maps, ChatGPT (for descriptions), and
                 Narakeet (for audio files).</p>
             `,
-            "delivery": `
+        "delivery": `
                 <h2>Optimization of Drone Delivery - UMN</h2>
             <img src="images/projects/3081.png"
                 alt="Optimization of Drone Delivery for the University of Minnesota Campus" class="project-image">
@@ -161,7 +160,7 @@ if (currentPage === "projects.html") {
                 work includes refining the simulation, transitioning to event-based models, and exploring real-world
                 deployment scenarios.</p>
             `,
-            "gene": `
+        "gene": `
             <h2>Predicting Genetic Interaction Profiles</h2>
             <img src="images/projects/5461.png" alt="Predicting Genetic Interaction Profiles using Machine Learning"
                 class="project-image">
@@ -206,7 +205,7 @@ if (currentPage === "projects.html") {
                 interactions, reducing costs, and accelerating discoveries in fields like cancer research and
                 personalized medicine.</p>
             `,
-            "simulation": `
+        "simulation": `
             <h2>Simulation Performance</h2>
             <img src="images/projects/5980.png" alt="Simulation Performance" class="project-image">
 
@@ -249,7 +248,7 @@ if (currentPage === "projects.html") {
                 accurate statistical validation. The results achieved a 90% confidence level with a precision of
                 0.05.</p>
             `,
-            "realsat": `
+        "realsat": `
             <h2>Classification of Bodies of Water - ReaLSAT</h2>
             <img src="images/projects/8523.png" alt="Classification of Bodies of Water in the ReaLSAT Dataset"
                 class="project-image">
@@ -294,7 +293,7 @@ if (currentPage === "projects.html") {
                 studies, and water resource management by providing policymakers with structured water
                 classification insights.</p>
             `,
-            "stable-diffusion": `
+        "stable-diffusion": `
             <h2>Leveraging Stable Diffusion for AI Data Generation</h2>
             <img src="images/projects/5527.png"
                 alt="Leveraging Stable Diffusion for Artificial Image Data Generation" class="project-image">
@@ -340,7 +339,7 @@ if (currentPage === "projects.html") {
             <p>Potential applications include data augmentation in medical imaging, adversarial training in
                 cybersecurity, and synthetic dataset creation for machine learning research.</p>
             `,
-            "data-mining": `
+        "data-mining": `
             <h2>Data Mining Analysis</h2>
             <img src="images/projects/5523.png" alt="Data Mining Analysis" class="project-image">
             <p>This project explores data mining techniques to analyze purchasing
@@ -377,7 +376,7 @@ if (currentPage === "projects.html") {
             <p>The techniques used in this project can be applied in retail analytics, customer segmentation,
                 recommendation systems, and fraud detection.</p>
             `,
-            "blamo": `
+        "blamo": `
                 <h2>BLaMo Design Document</h2>
                 <img src="images/projects/5801.png" alt="BLaMo Design Document" class="project-image">
 
@@ -410,18 +409,18 @@ if (currentPage === "projects.html") {
                     real-time scheduling adjustments, and integrating machine learning for predictive analytics in game
                     scheduling.</p>
             `
-        };
+    };
 
-        // Update the content area with the selected article
-        articleContainer.innerHTML = articles[project];
+    // Update the content area with the selected article
+    articleContainer.innerHTML = articles[project];
 
-        articleContainer.scrollTop = 0;
+    articleContainer.scrollTop = 0;
 
-        // Wait for a short time to allow layout adjustments, then scroll back
-        setTimeout(() => {
-            window.scrollTo(0, windowScrollY);
-        }, 0);
-    }
+    // Wait for a short time to allow layout adjustments, then scroll back
+    setTimeout(() => {
+        window.scrollTo(0, windowScrollY);
+    }, 0);
+}
 }
 
 function checkPassword() {
