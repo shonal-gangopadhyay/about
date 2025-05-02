@@ -8,16 +8,3 @@
         <li><a href="#" onclick="checkPassword()">Personal</a></li>
     </ul>
 </nav>
-
-<script>
-    function checkPassword() {
-        var password = prompt("Enter the password to access this page:");
-        var correctPassword = "shonalshonal";  // Change this to your actual password
-
-        if (password === correctPassword) {
-            window.location.href = "about-personal.html";  // Change this to your actual secret page
-        } else if (password !== null) {
-            alert("Incorrect password. Ask me if you need the password.");
-        }
-    }
-</script>
