@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shonal Gangopadhyay - Social</title>
-    <link rel="icon" type="image/x-icon" href="images/icon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script> <!-- Include JavaScript -->
-
+    <div id="shared-head"></div>
+    <script>
+        fetch("components/head.html")
+            .then((res) => res.text())
+            .then((html) => {
+                document.getElementById("shared-head").outerHTML = html;
+            });
+    </script>
 </head>
 
 <body>
@@ -30,11 +32,15 @@
             </ul>
         </section>
     </main>
-    <div id="footer"></div>
+    <div id="footer" class="skeleton"></div>
     <script>
         fetch('components/footer.html')
             .then(res => res.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
+            .then(data => {
+                const footer = document.getElementById('footer');
+                footer.innerHTML = data;
+                footer.classList.remove('skeleton');
+            });
     </script>
 </body>
 
