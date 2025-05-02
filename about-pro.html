@@ -131,9 +131,12 @@
 
     </main>
 
-    <footer>
-        <p>&copy; 2025 Shonal Gangopadhyay. All rights reserved.</p>
-    </footer>
+    <div id="footer"></div>
+    <script>
+        fetch('components/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
     <script>
         function checkPassword() {
