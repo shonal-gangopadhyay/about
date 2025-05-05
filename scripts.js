@@ -3,7 +3,7 @@ function checkPassword() {
     var correctPassword = "shonalshonal";  // Change this to your actual password
 
     if (password === correctPassword) {
-        window.location.href = "/about-personal.html";  // Change this to your actual secret page
+        window.location.href = "/about/about-personal.html";  // Change this to your actual secret page
     } else if (password !== null) {
         alert("Incorrect password. Ask me if you need the password.");
     }
