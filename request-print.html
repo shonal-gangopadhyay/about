@@ -2,20 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Request a 3D Print</title>
-    <div id="shared-head"></div>
-    <script>
-        // Dynamically load head.html into the <head>
-        fetch("/components/head.html")
-            .then((res) => res.text())
-            .then((html) => {
-                const template = document.createElement("template");
-                template.innerHTML = html;
-                [...template.content.children].forEach((el) =>
-                    document.head.appendChild(el)
-                );
-            });
-    </script>
+    <title>Request 3D Print</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/icon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
 </head>
 
 <body>
