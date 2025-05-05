@@ -5,10 +5,15 @@
     <title>Shonal Gangopadhyay - About</title>
     <div id="shared-head"></div>
     <script>
-        fetch("components/head.html")
+        // Dynamically load head.html into the <head>
+        fetch("/components/head.html")
             .then((res) => res.text())
             .then((html) => {
-                document.getElementById("shared-head").outerHTML = html;
+                const template = document.createElement("template");
+                template.innerHTML = html;
+                [...template.content.children].forEach((el) =>
+                    document.head.appendChild(el)
+                );
             });
     </script>
 </head>
@@ -22,7 +27,6 @@
                 .then(res => res.text())
                 .then(data => document.getElementById('nav2').innerHTML = data);
         </script>
-        <script defer src="/scripts.js"></script>
     </header>
 
     <main>

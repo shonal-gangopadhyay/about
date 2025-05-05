@@ -5,14 +5,17 @@
     <title>Shonal Gangopadhyay - Social</title>
     <div id="shared-head"></div>
     <script>
-        fetch("components/head.html")
+        // Dynamically load head.html into the <head>
+        fetch("/components/head.html")
             .then((res) => res.text())
             .then((html) => {
-                document.getElementById("shared-head").outerHTML = html;
+                const template = document.createElement("template");
+                template.innerHTML = html;
+                [...template.content.children].forEach((el) =>
+                    document.head.appendChild(el)
+                );
             });
     </script>
-    <script defer src="/scripts.js"></script>
-
 </head>
 
 <body>
